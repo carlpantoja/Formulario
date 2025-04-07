@@ -1,0 +1,10 @@
+{
+    "name": "web/formulario",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Pessoa\\": "pessoa/"
+        }
+    },
+    "require": {}
+}
