@@ -7,13 +7,13 @@
                 <section class="formulario">
                     <form method="post" onSubmit="return validarDados()">
                         <label for="nome">Nome: 
-                            <input type="text" name="nome" id="nome" value="<?=$objPessoa->nome?>">
+                            <input type="text" name="nome" id="nome" value="<?=$objPessoa->nome?>" required>
                         </label>
 
                         <br><br>
 
                         <label for="email">Email: 
-                            <input type="email" name="email" id="email" value="<?=$objPessoa->email?>">
+                            <input type="email" name="email" id="email" value="<?=$objPessoa->email?>" required>
                         </label>
 
                         <br><br>
@@ -32,7 +32,7 @@
                         <br><br>
 
                         <label for="data_nasc">Data de Nascimento: 
-                            <input type="date" name="data_nasc" id="data_nasc" value="<?=$objPessoa->data_nasc?>">
+                            <input type="date" name="data_nasc" id="data_nasc" value="<?=$objPessoa->data_nasc?>" onSelect="calc_idade()" required>
                         </label>
 
                         <br><br>
@@ -43,3 +43,4 @@
             </main>
 
             <script src="../../includes/validar_dados.js"></script>
+            <script src="../../includes/calcular_idade.js"></script>

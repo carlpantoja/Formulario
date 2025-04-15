@@ -8,5 +8,6 @@ use \Pessoa\Model\Pessoa;
 $objPessoa = Pessoa::getPessoas();
 
 include __DIR__.'/includes/header.php';
+include __DIR__.'/pessoa/Controller/filtro.php';
 include __DIR__.'/pessoa/View/listagem.php';
 include __DIR__.'/includes/footer.php';

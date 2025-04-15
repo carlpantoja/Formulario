@@ -10,7 +10,7 @@ body {
     align-items: center;
     padding: 10px;
     margin: 10px;
-    background-color: azure;
+    background-color: #c4e1ff;
 }
 
 main {
@@ -45,8 +45,9 @@ table.usuarios tr td {
     border-bottom: 1px solid #000;
 }
 
-button, input#enviar {
+button, input#enviar, input#aplicar {
     padding: 5px;
+    cursor: pointer;
 }
 
 a {
@@ -57,9 +58,17 @@ a {
 }
 
 a#editar {
-    background-color: cadetblue;
+    background-color: #5f9ea0;
 }
 
 a#excluir {
-    background-color: brown;
+    background-color: #a52a2a;
+}
+
+.fa {
+    padding: 5px;
+}
+
+.fa option:first-child {
+    font-weight: 500;
 }

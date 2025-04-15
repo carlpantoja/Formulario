@@ -4,11 +4,11 @@ $mensagem = '';
 if(isset($_GET['status'])) {
     switch($_GET['status']) {
         case 'success':
-            $mensagem = '<div>Cadastrado com sucesso!</div>';
+            $mensagem = '<div>Ação realizada com sucesso!</div>';
             break;
 
         case 'error':
-            $mensagem = '<div>Erro! Infelizmente não foi possível fazer o cadastro.</div>';
+            $mensagem = '<div>Erro! Ação não executada.</div>';
             break;
     }
 }
@@ -23,8 +23,8 @@ foreach($objPessoa as $p) {
                         <td>'.$p->genero.'</td>
                         <td>'.$p->data_nasc.'</td>
                         <td>
-                            <a href="pessoa/Controller/editar.php?id='.$p->id.'" id="editar">Editar</a>
-                            <a href="pessoa/Controller/excluir.php?id='.$p->id.'" id="excluir" onClick="return confirm(\'Confirmar exclusão?\')">Excluir</a>
+                            <a href="pessoa/Controller/editar.php?id='.$p->id.'" id="editar"><i class="fa fa-pencil" aria-hidden="true">Editar</i></a>
+                            <a href="pessoa/Controller/excluir.php?id='.$p->id.'" id="excluir" onClick="return confirm(\'Confirmar exclusão?\')"><i class="fa fa-trash" aria-hidden="true">Excluir</i></a>
                         </td>
                     </tr>';
 }
@@ -45,6 +45,19 @@ $resultados = strlen($resultados) ? $resultados : '<tr>
                 </section>
 
                 <section>
+
+                    <form method="post">
+                        <select name="filtro" class="fa">
+                            <option value="fa fa-filter"> &#xf0b0; Padrão</option>
+                            <option value="nome">Nome</option>
+                            <option value="idade">Idade</option>
+                            <option value="genero-m">Gênero: M</option>
+                            <option value="genero-f">Gênero: F</option>
+                        </select>
+                        <input type="submit" id="aplicar" value="Aplicar">
+                    </form>
+
+
                     <table class="usuarios">
                         <thead>
                             <tr>

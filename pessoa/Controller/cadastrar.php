@@ -7,11 +7,11 @@ use Pessoa\Model\Pessoa;
 $objPessoa = new Pessoa;
 
 if(isset($_POST['nome'], $_POST['email'], $_POST['idade'], $_POST['genero'], $_POST['data_nasc'])) {
-    $objPessoa->nome = $_POST['nome'];
-    $objPessoa->email = $_POST['email'];
-    $objPessoa->idade = $_POST['idade'];
-    $objPessoa->genero = $_POST['genero'];
-    $objPessoa->data_nasc = $_POST['data_nasc'];
+    $objPessoa->nome = htmlspecialchars($_POST['nome']);
+    $objPessoa->email = htmlspecialchars($_POST['email']);
+    $objPessoa->idade = htmlspecialchars($_POST['idade']);
+    $objPessoa->genero = htmlspecialchars($_POST['genero']);
+    $objPessoa->data_nasc = htmlspecialchars($_POST['data_nasc']);
     $objPessoa->cadastrar();
 
     header('location: ../../index.php?status=success');
